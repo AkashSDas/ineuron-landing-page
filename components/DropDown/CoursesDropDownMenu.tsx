@@ -53,6 +53,7 @@ export default function CoursesDropDownMenu({}) {
       className="h-full grid place-content-center"
       onMouseLeave={() => {
         setIsOpen(false);
+        setActiveCourse(null);
       }}
     >
       <a
