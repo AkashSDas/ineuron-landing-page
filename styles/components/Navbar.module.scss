@@ -1,0 +1,10 @@
+.navbar {
+  @apply px-[var(--nav-x-pad)] py-[var(--nav-y-pad)] 
+  flex justify-between items-center 
+  bg-light-purple 
+  border-b-2 border-white border-solid;
+}
+
+.navbar-child {
+  @apply flex justify-center items-center gap-[var(--nav-gap)];
+}
