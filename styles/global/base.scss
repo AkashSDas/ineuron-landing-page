@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --nav-x-pad: 2rem;
+  --nav-y-pad: 1.25rem;
+  --nav-gap: 4rem;
+}
+
 body {
-  @apply bg-light-violet;
+  @apply bg-light-violet font-poppins;
+  font-size: 16px;
 }
