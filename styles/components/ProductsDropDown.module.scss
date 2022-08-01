@@ -1,0 +1,31 @@
+// DropDown Text
+
+.dropdown {
+  @apply cursor-pointer 
+    text-grey hover:text-black 
+    flex items-center gap-[0.625rem];
+}
+
+.dropdown-icon {
+  @apply transition-all duration-300 stroke-grey;
+}
+
+// DropDown Wrapper
+
+.dropdown-wrapper {
+  @apply relative;
+}
+
+// DropDown Inner
+
+.dropdown-inner {
+  @apply absolute top-[35px]
+    bg-light-purple
+    border-2 border-white border-solid 
+    rounded-[12px] shadow-default 
+    w-[300px] px-[1rem] py-[0.5rem];
+}
+
+.dropdown-item {
+  @apply px-[1rem] py-[0.5rem] hover:bg-light-violet rounded-[6px] w-full flex items-center justify-between cursor-pointer;
+}

@@ -1,4 +1,5 @@
 import CoursesDropDown from "@components/DropDown/CoursesDropDown";
+import ProductsDropDown from "@components/DropDown/ProductsDropDown";
 import { ArrowDropDown } from "@components/Icons/ArrowDropDown";
 import styles from "@styles/components/Navbar.module.scss";
 
@@ -8,7 +9,7 @@ export default function Navbar() {
       <div className={styles["navbar-child"]}>
         <img src="/logo.svg" alt="iNeuron Logo" />
         <CoursesDropDown label="Courses" />
-        <DropDown label="Products" />
+        <ProductsDropDown />
         <DropDown label="Company" />
       </div>
 
