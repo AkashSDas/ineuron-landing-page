@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 
 import { ArrowDown } from "@components/Icons/ArrowDown";
+import { ProgramDropDownContext } from "@lib/context";
 
 const livePrograms = {
   title: "Live Programs",
@@ -100,34 +101,6 @@ export const Programs = () => {
   const [program, setProgram] = useState(livePrograms);
   const [isOpen, setIsOpen] = useState(false);
 
-  const DropDown = () => (
-    <div className="relative">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center gap-[10px] border-2 border-white border-solid bg-light-purple rounded-[12px] px-[1rem] h-[50px]"
-      >
-        {program.title} <ArrowDown className="stroke-black" />
-      </button>
-
-      {isOpen && (
-        <div className="absolute w-full bg-light-purple border-2 border-solid border-white rounded-[12px] shadow-default top-[58px]">
-          {programsTitles
-            .filter((t) => t !== program.title)
-            .map((t) => (
-              <div
-                className="px-1 py-3 z-10"
-                onClick={() =>
-                  setProgram(programs.filter((prg) => prg.title === t)[0])
-                }
-              >
-                {t}
-              </div>
-            ))}
-        </div>
-      )}
-    </div>
-  );
-
   const settings = {
     infinite: true,
     speed: 500,
@@ -140,26 +113,80 @@ export const Programs = () => {
   };
 
   return (
-    <section className="flex flex-col justify-center items-center gap-[3rem]">
-      <div className="flex justify-between items-center w-full px-[8rem]">
-        <h2 className="text-dark-violet text-[40px] font-medium">
-          {program.title}
-        </h2>
+    <ProgramDropDownContext.Provider value={{ isOpen, setIsOpen }}>
+      <section className="flex flex-col justify-center items-center gap-[3rem]">
+        <div className="flex justify-between items-center w-full px-[8rem]">
+          <h2 className="text-dark-violet text-[40px] font-medium">
+            {program.title}
+          </h2>
 
-        <div className="flex items-center gap-[2rem]">
-          <button className="text-dark-violet px-[2rem] h-[50px] hover:bg-light-purple rounded-full">
-            View More
-          </button>
-          <DropDown />
+          <div className="flex items-center gap-[2rem]">
+            <button className="text-dark-violet px-[2rem] h-[50px] hover:bg-light-purple rounded-full">
+              View More
+            </button>
+            <DropDown
+              program={program}
+              programsTitles={programsTitles}
+              setProgram={setProgram}
+              programs={programs}
+            />
+          </div>
         </div>
-      </div>
 
-      <Slider {...settings} className="w-full z-[-1]" arrows={false}>
-        {program.programs.map((prg) => (
-          <CourseCard course={prg} />
-        ))}
-      </Slider>
-    </section>
+        <Slider {...settings} className="w-full z-[-1]" arrows={false}>
+          {program.programs.map((prg) => (
+            <CourseCard course={prg} />
+          ))}
+        </Slider>
+      </section>
+    </ProgramDropDownContext.Provider>
+  );
+};
+
+const DropDown = ({ program, programsTitles, setProgram, programs }) => {
+  const { isOpen, setIsOpen } = useContext(ProgramDropDownContext);
+  const ref = useRef();
+
+  useEffect(() => {
+    const closeDropDown = (e) => {
+      if (e.path[0] !== ref.current) {
+        setIsOpen(false);
+      }
+    };
+
+    document.body.addEventListener("click", closeDropDown);
+
+    () => document.body.removeEventListener("click", closeDropDown);
+  }, []);
+
+  return (
+    <div className="relative">
+      <button
+        ref={ref}
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center justify-center gap-[10px] border-2 border-white border-solid bg-light-purple rounded-[12px] px-[1rem] h-[50px]"
+      >
+        {program.title} <ArrowDown className="stroke-black" />
+      </button>
+
+      {isOpen && (
+        <div className="absolute text-[15px] w-full bg-light-purple border-2 border-solid border-white rounded-[12px] shadow-default top-[58px] px-[4px] py-[6px]">
+          {programsTitles
+            .filter((t) => t !== program.title)
+            .map((t) => (
+              <div
+                className="px-[2px] py-[6px] z-10 hover:bg-light-violet rounded-[6px] cursor-pointer"
+                onClick={() => {
+                  setProgram(programs.filter((prg) => prg.title === t)[0]);
+                  setIsOpen(false);
+                }}
+              >
+                {t}
+              </div>
+            ))}
+        </div>
+      )}
+    </div>
   );
 };
 
@@ -169,7 +196,7 @@ const CourseCard = ({ course }) => {
     <div className="w-[360px] flex flex-col gap-[10px] cursor-pointer">
       <div className="relative">
         <img
-          className="w-[360px] h-[200px]"
+          className="w-[360px] h-[200px] rounded-[12px]"
           src={course.coverURL}
           alt={course.title}
         />
