@@ -1,6 +1,6 @@
-import HallOfFame from "@components/HallOfFame/HallOfFame";
 import Affiliate from "@components/Icons/Affiliate";
 import Blog from "@components/Icons/Blog";
+import HallOfFame from "@components/Icons/HallOfFame";
 import Internship from "@components/Icons/Internship";
 import Job from "@components/Icons/Job";
 import styles from "@styles/components/OurProducts/OurProducts.module.scss";
@@ -22,7 +22,7 @@ function OurProducts() {
 
   return (
     <section className="p-8">
-      <h2 className="h2">Our Products</h2>
+      <h2 className="h2 text-center">Our Products</h2>
 
       <div className={styles.container}>
         <Card
