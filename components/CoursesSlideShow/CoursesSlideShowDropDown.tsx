@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 
 import { ArrowDown } from "@components/Icons/ArrowDown";
@@ -35,7 +36,14 @@ function CoursesSlideShowDropDown(props: Props) {
   };
 
   const DropDown = () => (
-    <div className={styles.dropdown}>
+    <motion.div
+      key={"dropdown"}
+      className={styles.dropdown}
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -10, opacity: 0 }}
+      transition={{ duration: 0.2 }}
+    >
       {programTitles
         .filter((t) => t !== activeProgram.title)
         .map((t) => (
@@ -43,7 +51,7 @@ function CoursesSlideShowDropDown(props: Props) {
             {t}
           </div>
         ))}
-    </div>
+    </motion.div>
   );
 
   return (
@@ -56,7 +64,9 @@ function CoursesSlideShowDropDown(props: Props) {
         {activeProgram.title} {isOpen} <ArrowDown className="stroke-black" />
       </button>
 
-      {isOpen && <DropDown />}
+      <AnimatePresence exitBeforeEnter>
+        {isOpen ? <DropDown /> : <motion.div></motion.div>}
+      </AnimatePresence>
     </div>
   );
 }
