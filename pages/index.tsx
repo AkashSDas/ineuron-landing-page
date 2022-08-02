@@ -1,6 +1,6 @@
 import CoursesSlideShow from "@components/CoursesSlideShow/CoursesSlideShow";
 import Footer from "@components/Footer";
-import { HackathonSection } from "@components/Hackathon";
+import Hackathon from "@components/Hackathon/Hackathon";
 import HallOfFame from "@components/HallOfFame/HallOfFame";
 import Hero from "@components/Header/Hero";
 import LongNavbar from "@components/Header/LongNavbar";
@@ -19,7 +19,7 @@ export default function HomePage() {
         <CoursesSlideShow />
         <InstructorsBoard />
         <JobProspects />
-        <HackathonSection />
+        <Hackathon />
         <HallOfFame />
         <OurProducts />
         <OurInstitutionPartners />
