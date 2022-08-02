@@ -1,0 +1,31 @@
+// Course Card
+.card {
+  @apply w-[360px] 
+  flex flex-col gap-[10px] 
+  cursor-pointer;
+}
+
+// Cover Image and Price/Live tags
+.cover {
+  @apply relative;
+
+  img {
+    @apply w-[360px] h-[200px] rounded-[12px];
+  }
+
+  .info-tags {
+    @apply flex gap-2 items-center absolute top-[80%] right-2;
+
+    .tag {
+      @apply text-[15px] text-dark-violet font-medium bg-light-purple px-2 py-1 rounded-[8px];
+    }
+  }
+}
+
+.tags {
+  @apply flex flex-wrap gap-2;
+
+  .tag {
+    @apply text-[13px] text-violet bg-light-purple p-1 rounded-[6px];
+  }
+}
