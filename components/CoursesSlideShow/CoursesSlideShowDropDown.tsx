@@ -1,7 +1,6 @@
-import { Dispatch, SetStateAction, useContext, useEffect, useRef } from "react";
+import { Dispatch, SetStateAction, useEffect, useRef } from "react";
 
 import { ArrowDown } from "@components/Icons/ArrowDown";
-import { ProgramDropDownContext } from "@lib/context";
 import { IProgram } from "@lib/courses";
 import styles from "@styles/components/CourseSlideShow/CoursesSlideShowDropDown.module.scss";
 

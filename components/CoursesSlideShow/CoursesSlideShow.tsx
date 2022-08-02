@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Slider from "react-slick";
 
-import { ProgramDropDownContext } from "@lib/context";
 import { affordableCourses, liveCouses } from "@lib/courses";
 import styles from "@styles/components/CourseSlideShow/CoursesSlideShow.module.scss";
 
@@ -19,12 +18,13 @@ function CoursesSlideShow() {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    cssEase: "ease-out",
+    cssEase: "cubic-bezier(0.85, 0, 0.15, 1)",
     centerMode: true,
     arrows: false,
+    dot: false,
   };
 
   return (
