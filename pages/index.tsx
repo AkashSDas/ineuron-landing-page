@@ -1,4 +1,5 @@
 import PrimaryButton from "@components/Button/PrimaryButton";
+import CoursesSlideShow from "@components/CoursesSlideShow/CoursesSlideShow";
 import Footer from "@components/Footer";
 import { HackathonSection } from "@components/Hackathon";
 import { HallOfFame } from "@components/HallOfFame";
@@ -9,7 +10,6 @@ import { JobProspects } from "@components/JobProspects";
 import Navbar from "@components/Navbar/index";
 import OurInstitutionPartners from "@components/OurInstitutionPartners";
 import OurProducts from "@components/OurProducts";
-import { Programs } from "@components/Programs/index";
 
 export default function HomePage() {
   return (
@@ -18,7 +18,7 @@ export default function HomePage() {
 
       <main className="mt-[150px] flex flex-col gap-[150px]">
         <Hero />
-        <Programs />
+        <CoursesSlideShow />
         <InstructorSection />
         <JobProspects />
         <HackathonSection />

@@ -1,0 +1,15 @@
+.wrapper {
+  @apply flex flex-col justify-center items-center gap-[3rem];
+}
+
+.heading {
+  @apply flex justify-between items-center w-full px-[8rem];
+}
+
+.actions {
+  @apply flex items-center gap-[2rem];
+}
+
+.slider {
+  @apply w-full z-[-1];
+}

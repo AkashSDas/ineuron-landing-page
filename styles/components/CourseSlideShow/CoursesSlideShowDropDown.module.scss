@@ -1,0 +1,15 @@
+.dropdown-wrapper {
+  @apply relative;
+}
+
+.btn {
+  @apply flex items-center justify-center gap-[10px] border-2 border-white border-solid bg-light-purple rounded-[12px] px-[1rem] h-[50px];
+}
+
+.dropdown {
+  @apply absolute text-[15px] w-full bg-light-purple border-2 border-solid border-white rounded-[12px] shadow-default top-[58px] px-[4px] py-[6px];
+}
+
+.option {
+  @apply px-[2px] py-[6px] z-10 hover:bg-light-violet rounded-[6px] cursor-pointer;
+}
