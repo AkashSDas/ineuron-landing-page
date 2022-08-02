@@ -1,0 +1,11 @@
+.wrapper {
+  @apply w-full;
+}
+
+.board {
+  @apply flex gap-[2rem] justify-center;
+}
+
+.btn-wrapper {
+  @apply mt-8 grid place-content-center;
+}
