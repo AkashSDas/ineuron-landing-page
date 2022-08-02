@@ -1,7 +1,7 @@
 import CoursesSlideShow from "@components/CoursesSlideShow/CoursesSlideShow";
 import Footer from "@components/Footer";
 import { HackathonSection } from "@components/Hackathon";
-import { HallOfFame } from "@components/HallOfFame";
+import HallOfFame from "@components/HallOfFame/HallOfFame";
 import Hero from "@components/Header/Hero";
 import LongNavbar from "@components/Header/LongNavbar";
 import InstructorsBoard from "@components/InstructorsBoard/InstructorsBoard";
