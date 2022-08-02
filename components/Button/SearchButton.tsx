@@ -1,9 +1,12 @@
 import Search from "@components/Icons/Search";
+import styles from "@styles/components/Button/SearchButton.module.scss";
 
-export default function SearchButton() {
+function SearchButton() {
   return (
-    <button className="hover:bg-light-violet p-2 rounded-[8px]">
+    <button className={styles.btn}>
       <Search className="fill-grey" />
     </button>
   );
 }
+
+export default SearchButton;

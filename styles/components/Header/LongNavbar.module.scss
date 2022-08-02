@@ -1,10 +1,10 @@
 // Navbar Container
 .navbar {
   @apply h-[74px]
-  flex justify-between items-center
-  bg-light-purple
-  border-b-2 border-white border-solid
-  px-[var(--nav-x-pad)];
+    flex justify-between items-center
+    bg-light-purple
+    border-b-2 border-white border-solid
+    px-[var(--nav-x-pad)];
   // px-[var(--nav-x-pad)] py-[var(--nav-y-pad)]
 }
 

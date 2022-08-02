@@ -1,7 +1,7 @@
-export default function TextButton({ label }) {
-  return (
-    <button className="h-[50px] text-black hover:bg-light-violet px-[2rem] rounded-full">
-      {label}
-    </button>
-  );
+import styles from "@styles/components/Button/TextButton.module.scss";
+
+function TextButton({ label }: { label: string }) {
+  return <button className={styles.btn}>{label}</button>;
 }
+
+export default TextButton;

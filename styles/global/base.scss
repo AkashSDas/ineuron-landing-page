@@ -12,3 +12,7 @@ body {
   @apply bg-light-violet font-poppins;
   font-size: 16px;
 }
+
+::selection {
+  @apply bg-violet text-white;
+}

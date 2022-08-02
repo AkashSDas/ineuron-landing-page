@@ -1,0 +1,12 @@
+.hero-wrapper {
+  @apply flex flex-col gap-[2rem] justify-center items-center;
+}
+
+.heading {
+  @apply text-center text-[90px] leading-[98px] text-dark-violet 
+  font-medium;
+}
+
+.description {
+  @apply text-grey text-[23px] text-center w-[45%];
+}

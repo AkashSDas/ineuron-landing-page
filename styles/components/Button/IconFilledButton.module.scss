@@ -1,0 +1,7 @@
+.btn {
+  @apply h-[50px] 
+  flex items-center justify-center gap-[12px] 
+  text-white bg-violet px-[2rem] 
+  rounded-full 
+  hover:brightness-90;
+}

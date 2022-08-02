@@ -1,7 +1,7 @@
-export default function PrimaryButton({ label }) {
-  return (
-    <button className="h-[50px] text-white bg-violet px-[2rem] rounded-full hover:brightness-90">
-      {label}
-    </button>
-  );
+import styles from "@styles/components/Button/PrimaryButton.module.scss";
+
+function PrimaryButton({ label }: { label: string }) {
+  return <button className={styles.btn}>{label}</button>;
 }
+
+export default PrimaryButton;

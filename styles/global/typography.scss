@@ -7,3 +7,9 @@
 .h3 {
   @apply text-dark-violet text-[40px] font-medium;
 }
+
+.text-stroke {
+  color: transparent;
+  text-shadow: none;
+  -webkit-text-stroke: 1.25px hsla(259, 100%, 22%, 1);
+}
