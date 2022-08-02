@@ -1,17 +1,30 @@
+import HallOfFame from "@components/HallOfFame/HallOfFame";
 import Affiliate from "@components/Icons/Affiliate";
 import Blog from "@components/Icons/Blog";
-import HallOfFame from "@components/Icons/HallOfFame";
 import Internship from "@components/Icons/Internship";
 import Job from "@components/Icons/Job";
+import styles from "@styles/components/OurProducts/OurProducts.module.scss";
+
+export interface IProduct {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+}
 
 function OurProducts() {
+  const Card = ({ icon, title, description }: IProduct) => (
+    <div className={styles.card}>
+      <div className={styles.icon}>{icon}</div>
+      <h5 className={styles.heading}>{title}</h5>
+      <p className={styles.description}>{description}</p>
+    </div>
+  );
+
   return (
     <section className="p-8">
-      <h2 className="text-center text-medium text-dark-violet text-[60px] mb-16">
-        Our Products
-      </h2>
+      <h2 className="h2">Our Products</h2>
 
-      <div className="flex gap-8 justify-center">
+      <div className={styles.container}>
         <Card
           icon={<Affiliate />}
           title="Become an Affiliate"
@@ -29,7 +42,7 @@ function OurProducts() {
         />
       </div>
 
-      <div className="flex mt-8 gap-8 justify-center">
+      <div className={styles.container}>
         <Card
           icon={<HallOfFame />}
           title="Hall of Fame"
@@ -42,18 +55,6 @@ function OurProducts() {
         />
       </div>
     </section>
-  );
-}
-
-function Card({ icon, title, description }) {
-  return (
-    <div className="w-[410px] border-solid border-white border-2 rounded-[25px] bg-light-purple flex flex-col gap-2 p-4">
-      <div className="p-2 w-max border-solid border-white border-[1.5px] rounded-[20px] bg-light-purple">
-        {icon}
-      </div>
-      <h3 className="text-[18px] text-black font-medium">{title}</h3>
-      <p className="text-[15px] text-grey font-normal">{description}</p>
-    </div>
   );
 }
 
