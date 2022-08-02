@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 import { ArrowDropDown } from "@components/Icons/ArrowDropDown";
@@ -54,10 +55,20 @@ function CoursesDropDown() {
   };
 
   const DropDown = () => (
-    <div className={styles.dropdown}>
-      <MainCourses />
-      <SubCourses />
-    </div>
+    <AnimatePresence exitBeforeEnter presenceAffectsLayout>
+      <motion.div
+        layout
+        className={styles.dropdown}
+        key={"dropdown"}
+        initial={!activeCourse ? { y: 10, opacity: 0 } : null}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: -10, opacity: 0 }}
+        transition={{ duration: 0.2 }}
+      >
+        <MainCourses />
+        <SubCourses />
+      </motion.div>
+    </AnimatePresence>
   );
 
   return (
@@ -74,7 +85,9 @@ function CoursesDropDown() {
         <ArrowDropDown className="stroke-black" />
       </a>
 
-      {isOpen ? <DropDown /> : null}
+      <AnimatePresence exitBeforeEnter>
+        {isOpen ? <DropDown /> : <motion.div key={"empty"}></motion.div>}
+      </AnimatePresence>
     </li>
   );
 }

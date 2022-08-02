@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 import { ArrowDropDown } from "@components/Icons/ArrowDropDown";
@@ -12,13 +13,20 @@ function DropDown({ label, items }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const ItemsList = () => (
-    <div className={styles.dropdown}>
+    <motion.div
+      key={"dropdown"}
+      className={styles.dropdown}
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -10, opacity: 0 }}
+      transition={{ duration: 0.2 }}
+    >
       <div className={styles.items}>
         {items.map((item) => (
           <div className={styles.item}>{item}</div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 
   return (
@@ -35,7 +43,9 @@ function DropDown({ label, items }: Props) {
         <ArrowDropDown className="stroke-black" />
       </a>
 
-      {isOpen ? <ItemsList /> : null}
+      <AnimatePresence exitBeforeEnter>
+        {isOpen ? <ItemsList /> : <motion.div key={"empty"}></motion.div>}
+      </AnimatePresence>
     </li>
   );
 }
