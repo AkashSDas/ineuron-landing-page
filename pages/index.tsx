@@ -1,4 +1,5 @@
 import PrimaryButton from "@components/Button/PrimaryButton";
+import Footer from "@components/Footer";
 import { HackathonSection } from "@components/Hackathon";
 import { HallOfFame } from "@components/HallOfFame";
 import { Hero } from "@components/Hero/Hero";
@@ -25,6 +26,8 @@ export default function HomePage() {
         <OurProducts />
         <OurInstitutionPartners />
       </main>
+
+      <Footer />
     </>
   );
 }
