@@ -6,6 +6,7 @@ import { ArrowRight2 } from "@components/Icons/ArrowRight2";
 import { InstructorSection } from "@components/InstructorsSection";
 import { JobProspects } from "@components/JobProspects";
 import Navbar from "@components/Navbar/index";
+import OurInstitutionPartners from "@components/OurInstitutionPartners";
 import OurProducts from "@components/OurProducts";
 import { Programs } from "@components/Programs/index";
 
@@ -22,6 +23,7 @@ export default function HomePage() {
         <HackathonSection />
         <HallOfFame />
         <OurProducts />
+        <OurInstitutionPartners />
       </main>
     </>
   );
