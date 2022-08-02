@@ -1,4 +1,5 @@
 import PrimaryButton from "@components/Button/PrimaryButton";
+import { HackathonSection } from "@components/Hackathon";
 import { Hero } from "@components/Hero/Hero";
 import { ArrowRight2 } from "@components/Icons/ArrowRight2";
 import { InstructorSection } from "@components/InstructorsSection";
@@ -16,6 +17,7 @@ export default function HomePage() {
         <Programs />
         <InstructorSection />
         <JobProspects />
+        <HackathonSection />
       </main>
     </>
   );
