@@ -34,6 +34,12 @@ function LongNavbar() {
     },
   };
 
+  const container2 = {
+    animate: {
+      transition: { delayChildren: 0.9, staggerChildren: 0.2 },
+    },
+  };
+
   const item = {
     initial: { y: -20, opacity: 0 },
     animate: {
@@ -64,10 +70,9 @@ function LongNavbar() {
       </motion.ul>
 
       <motion.ul
-        variants={container}
+        variants={container2}
         initial="initial"
         animate="animate"
-        transition={{ delay: 1.6 }}
         className={styles["nav-right"]}
       >
         <motion.div variants={item}>
