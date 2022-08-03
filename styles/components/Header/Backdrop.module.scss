@@ -1,0 +1,5 @@
+.backdrop {
+  @apply top-0 left-0 h-full w-full flex justify-center items-center
+  z-[100] fixed;
+  background-color: #000000e1;
+}

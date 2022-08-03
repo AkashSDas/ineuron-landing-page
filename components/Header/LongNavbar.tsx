@@ -1,14 +1,19 @@
 import { motion } from "framer-motion";
+import { useContext } from "react";
 
 import PrimaryButton from "@components/Button/PrimaryButton";
 import SearchButton from "@components/Button/SearchButton";
 import TextButton from "@components/Button/TextButton";
+import { SearchModalContext } from "@lib/context";
 import styles from "@styles/components/Header/LongNavbar.module.scss";
 
 import CoursesDropDown from "./CoursesDropDown";
 import DropDown from "./DropDown";
 
 function LongNavbar() {
+  const { searchModalIsOpen, setSearchModalIsOpen } =
+    useContext(SearchModalContext);
+
   const products = [
     "Blog",
     "Job Portal",
@@ -75,7 +80,10 @@ function LongNavbar() {
         animate="animate"
         className={styles["nav-right"]}
       >
-        <motion.div variants={item}>
+        <motion.div
+          variants={item}
+          onClick={() => setSearchModalIsOpen((s) => !s)}
+        >
           <SearchButton />
         </motion.div>
         <motion.div variants={item}>

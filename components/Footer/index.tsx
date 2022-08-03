@@ -42,7 +42,7 @@ function Footer() {
   return (
     <footer className="mt-[150px] bg-light-purple border-t-2 border-white p-[var(--nav-x-pad)] flex gap-12 flex-wrap">
       <div className="flex-grow flex flex-col gap-3">
-        <div className="flex items-center gap-36">
+        <div className="flex items-center gap-5 md:gap-36">
           <img src="/logo.svg" alt="iNeuron Logo" />
 
           <div className="flex items-center gap-4">
