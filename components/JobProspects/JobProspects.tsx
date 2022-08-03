@@ -86,7 +86,7 @@ function JobProspects() {
       whileInView="animate"
     >
       <motion.h2
-        className="h2 text-center"
+        className="h2 text-center w-full md:w-[630px] lg:w-[720px]"
         style={style}
         variants={{
           initial: { y: "130%", opacity: 0, rotateX: "-40deg" },
@@ -105,8 +105,8 @@ function JobProspects() {
         whileInView="animate"
         viewport={{ once: true }}
       >
-        Become ready to work at <br /> <span className="text-stroke">MNCs</span>{" "}
-        and <span className="text-stroke">Startups</span>
+        Become ready to work at <span className="text-stroke">MNCs</span> and{" "}
+        <span className="text-stroke">Startups</span>
       </motion.h2>
 
       <motion.p

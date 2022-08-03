@@ -1,16 +1,16 @@
 .wrapper {
-  @apply p-12 flex flex-col justify-center items-center gap-8;
+  @apply p-4 flex flex-col justify-center items-center gap-8;
 
   perspective: 600px;
   --webkit-perspective: 600px;
 }
 
 .description {
-  @apply font-medium text-[23px] text-center text-grey w-[600px];
+  @apply font-medium text-[18px] text-center text-grey w-[360px] md:w-[460px];
 }
 
 .slider1 {
-  @apply -rotate-1 mt-[6.125rem] w-screen overflow-hidden flex gap-8 items-center justify-center;
+  @apply -rotate-1 mt-[1rem] w-screen overflow-hidden flex gap-8 items-center justify-center;
 }
 
 .slider2 {
