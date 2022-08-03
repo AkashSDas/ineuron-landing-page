@@ -2,3 +2,13 @@
   perspective: 600px;
   --webkit-perspective: 600px;
 }
+
+.icons {
+  @apply flex gap-8 justify-center flex-wrap;
+}
+
+.card {
+  @apply mix-blend-luminosity transition-all duration-300
+  ease-in-out hover:shadow-default bg-white rounded-[30px]
+w-[100px] h-[100px] lg:w-[150px] lg:h-[150px];
+}

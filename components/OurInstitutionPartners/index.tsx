@@ -27,7 +27,7 @@ function OurInstitutionPartners() {
 
   const Card = ({ name }) => (
     <img
-      className="mix-blend-luminosity transition-all duration-300 ease-in-out hover:shadow-default bg-white rounded-[30px] w-[150px] h-[150px]"
+      className={styles.card}
       src={`/partner-institutions/${name}.svg`}
       alt={name}
     />
@@ -41,7 +41,7 @@ function OurInstitutionPartners() {
       whileInView="animate"
     >
       <motion.h2
-        className="text-center text-medium text-dark-violet text-[60px] mb-16"
+        className="h2 text-center mb-8"
         style={style}
         variants={{
           initial: { y: "130%", opacity: 0, rotateX: "-40deg" },
@@ -64,7 +64,7 @@ function OurInstitutionPartners() {
       </motion.h2>
 
       <motion.div
-        className="flex gap-8 justify-center"
+        className={styles["icons"]}
         style={style}
         variants={{
           initial: { y: "130%", opacity: 0, rotateX: "-40deg" },
