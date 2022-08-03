@@ -76,17 +76,73 @@ function JobProspects() {
       initial="initial"
       whileInView="animate"
     >
-      <motion.h2 className="h2 text-center" style={style} variants={item}>
+      <motion.h2
+        className="h2 text-center"
+        style={style}
+        variants={{
+          initial: { y: "130%", opacity: 0, rotateX: "-40deg" },
+          animate: {
+            y: "0%",
+            opacity: 1,
+            rotateX: "0deg",
+            transition: {
+              ease: [0.6, 0.01, -0.05, 0.95],
+              duration: 1,
+              delay: 0.3,
+            },
+          },
+        }}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
         Become ready to work at <br /> <span className="text-stroke">MNCs</span>{" "}
         and <span className="text-stroke">Startups</span>
       </motion.h2>
 
-      <motion.p className={styles.description} style={style} variants={item}>
+      <motion.p
+        className={styles.description}
+        style={style}
+        variants={{
+          initial: { y: "130%", opacity: 0, rotateX: "-40deg" },
+          animate: {
+            y: "0%",
+            opacity: 1,
+            rotateX: "0deg",
+            transition: {
+              ease: [0.6, 0.01, -0.05, 0.95],
+              duration: 1,
+              delay: 0.3,
+            },
+          },
+        }}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
         Our 10K+ students have got placed and our top achievers are working in
         the following companies
       </motion.p>
 
-      <motion.div style={style} variants={item}>
+      <motion.div
+        style={style}
+        variants={{
+          initial: { y: "130%", opacity: 0, rotateX: "-40deg" },
+          animate: {
+            y: "0%",
+            opacity: 1,
+            rotateX: "0deg",
+            transition: {
+              ease: [0.6, 0.01, -0.05, 0.95],
+              duration: 1,
+              delay: 0.3,
+            },
+          },
+        }}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
         <IconFilledButton
           label="Get Started"
           icon={<ArrowRight2 className="stroke-white" />}

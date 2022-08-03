@@ -64,11 +64,49 @@ function Hackathon() {
         initial="initial"
         whileInView="animate"
       >
-        <motion.h2 className="h2" style={style} variants={item}>
+        <motion.h2
+          className="h2"
+          style={style}
+          variants={{
+            initial: { y: "130%", opacity: 0, rotateX: "-40deg" },
+            animate: {
+              y: "0%",
+              opacity: 1,
+              rotateX: "0deg",
+              transition: {
+                ease: [0.6, 0.01, -0.05, 0.95],
+                duration: 1,
+                delay: 0.3,
+              },
+            },
+          }}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
           Hackathon
         </motion.h2>
 
-        <motion.p className={styles.description} style={style} variants={item}>
+        <motion.p
+          className={styles.description}
+          style={style}
+          variants={{
+            initial: { y: "130%", opacity: 0, rotateX: "-40deg" },
+            animate: {
+              y: "0%",
+              opacity: 1,
+              rotateX: "0deg",
+              transition: {
+                ease: [0.6, 0.01, -0.05, 0.95],
+                duration: 1,
+                delay: 0.3,
+              },
+            },
+          }}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
           Our 24 hour offline coding events such as{" "}
           <span className="text-dark-violet">Hack-a-thons</span>,{" "}
           <span className="text-dark-violet">Job-a-thons</span> and{" "}
@@ -78,11 +116,49 @@ function Hackathon() {
         </motion.p>
 
         <div>
-          <motion.h5 className={styles.subtitle} style={style} variants={item}>
+          <motion.h5
+            className={styles.subtitle}
+            style={style}
+            variants={{
+              initial: { y: "130%", opacity: 0, rotateX: "-40deg" },
+              animate: {
+                y: "0%",
+                opacity: 1,
+                rotateX: "0deg",
+                transition: {
+                  ease: [0.6, 0.01, -0.05, 0.95],
+                  duration: 1,
+                  delay: 0.3,
+                },
+              },
+            }}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+          >
             Partner Companies
           </motion.h5>
 
-          <motion.div className="w-full" style={style} variants={item}>
+          <motion.div
+            className="w-full"
+            style={style}
+            variants={{
+              initial: { y: "130%", opacity: 0, rotateX: "-40deg" },
+              animate: {
+                y: "0%",
+                opacity: 1,
+                rotateX: "0deg",
+                transition: {
+                  ease: [0.6, 0.01, -0.05, 0.95],
+                  duration: 1,
+                  delay: 0.3,
+                },
+              },
+            }}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+          >
             <Slider {...settings} className="w-full">
               {companies.map((company) => (
                 <CompanyCard url={`/companies/${company}.png`} />
@@ -93,16 +169,21 @@ function Hackathon() {
       </motion.div>
 
       <motion.img
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: {
-            ease: [0.6, 0.01, -0.05, 0.95],
-            duration: 1,
-            delay: 1.1,
+        variants={{
+          initial: { opacity: 0, y: 40 },
+          animate: {
+            opacity: 1,
+            y: 0,
+            transition: {
+              ease: [0.6, 0.01, -0.05, 0.95],
+              duration: 1,
+              delay: 1.1,
+            },
           },
         }}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
         className="mix-blend-luminosity"
         src="/hackathon.png"
         alt="Hackathon"
