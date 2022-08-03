@@ -5,7 +5,7 @@ import HallOfFame from "@components/HallOfFame/HallOfFame";
 import Hero from "@components/Header/Hero";
 import LongNavbar from "@components/Header/LongNavbar";
 import InstructorsBoard from "@components/InstructorsBoard/InstructorsBoard";
-import { JobProspects } from "@components/JobProspects";
+import JobProspects from "@components/JobProspects/JobProspects";
 import OurInstitutionPartners from "@components/OurInstitutionPartners";
 import OurProducts from "@components/OurProducts/OurProducts";
 
