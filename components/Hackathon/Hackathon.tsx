@@ -1,3 +1,4 @@
+import { motion, MotionStyle } from "framer-motion";
 import Slider from "react-slick";
 
 import styles from "@styles/components/Hackathon/Hackathon.module.scss";
@@ -33,32 +34,75 @@ function Hackathon() {
     </div>
   );
 
+  const container = {
+    animate: {
+      transition: { delayChildren: 0.4, staggerChildren: 0.2 },
+    },
+  };
+
+  const item = {
+    initial: { y: "130%", opacity: 0, rotateX: "-40deg" },
+    animate: {
+      y: "0%",
+      opacity: 1,
+      rotateX: "0deg",
+      transition: { ease: [0.6, 0.01, -0.05, 0.95], duration: 1 },
+    },
+  };
+
+  const style: MotionStyle = {
+    transformOrigin: "center top",
+    transformStyle: "preserve-3d",
+    willChange: "auto",
+  };
+
   return (
     <section className={styles.wrapper}>
-      <div className={styles.heading}>
-        <h2 className="h2">Hackathon</h2>
+      <motion.div
+        className={styles.heading}
+        variants={container}
+        initial="initial"
+        whileInView="animate"
+      >
+        <motion.h2 className="h2" style={style} variants={item}>
+          Hackathon
+        </motion.h2>
 
-        <p className={styles.description}>
+        <motion.p className={styles.description} style={style} variants={item}>
           Our 24 hour offline coding events such as{" "}
           <span className="text-dark-violet">Hack-a-thons</span>,{" "}
           <span className="text-dark-violet">Job-a-thons</span> and{" "}
           <span className="text-dark-violet">Course-a-thons</span> give
           participants an opportunity to exhibit their skills and receive prizes
           for completing courses, or get recruited for their skillset.
-        </p>
+        </motion.p>
 
         <div>
-          <h5 className={styles.subtitle}>Partner Companies</h5>
+          <motion.h5 className={styles.subtitle} style={style} variants={item}>
+            Partner Companies
+          </motion.h5>
 
-          <Slider {...settings} className="w-full">
-            {companies.map((company) => (
-              <CompanyCard url={`/companies/${company}.png`} />
-            ))}
-          </Slider>
+          <motion.div className="w-full" style={style} variants={item}>
+            <Slider {...settings} className="w-full">
+              {companies.map((company) => (
+                <CompanyCard url={`/companies/${company}.png`} />
+              ))}
+            </Slider>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
-      <img
+      <motion.img
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: [0.6, 0.01, -0.05, 0.95],
+            duration: 1,
+            delay: 1.1,
+          },
+        }}
         className="mix-blend-luminosity"
         src="/hackathon.png"
         alt="Hackathon"

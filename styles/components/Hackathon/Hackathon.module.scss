@@ -4,6 +4,9 @@
 
 .heading {
   @apply w-2/4 flex flex-col gap-8;
+
+  perspective: 600px;
+  --webkit-perspective: 600px;
 }
 
 .description {
