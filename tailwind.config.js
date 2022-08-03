@@ -21,7 +21,11 @@ module.exports = {
     fontFamily: {
       poppins: "Poppins, sans-serif",
     },
-    extend: {},
+    extend: {
+      transitionTimingFunction: {
+        snappy: "cubic-bezier(0.6, 0.01, -0.05, 0.95)",
+      },
+    },
   },
   plugins: [],
 };
