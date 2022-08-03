@@ -1,3 +1,4 @@
+import TextButton from "@components/Button/TextButton";
 import { ArrowRight2 } from "@components/Icons/ArrowRight2";
 import Briefcase from "@components/Icons/Briefcase";
 import Collection from "@components/Icons/Collection";
@@ -24,6 +25,8 @@ function SmallNavbarMenu() {
         <span className="flex-grow">Company</span>
         <ArrowRight2 className="stroke-grey" />
       </div>
+
+      <TextButton label="Login" />
     </section>
   );
 }

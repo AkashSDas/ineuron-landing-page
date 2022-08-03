@@ -78,6 +78,9 @@ function SmallNavbar() {
         <motion.div variants={item} onClick={() => setIsOpen((s) => !s)}>
           {!isOpen ? <Menu /> : <Cancel />}
         </motion.div>
+        <motion.div variants={item}>
+          <PrimaryButton label="Get Started" />
+        </motion.div>
       </motion.ul>
     </nav>
   );
