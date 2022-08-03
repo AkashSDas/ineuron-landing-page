@@ -1,9 +1,11 @@
 .wrapper {
-  @apply w-4/5 mr-auto ml-auto flex gap-4 justify-between items-center;
+  @apply flex flex-col-reverse lg:flex-row gap-14 lg:justify-center items-center
+  md:gap-6 lg:gap-8 xl:gap-14 px-4;
 }
 
 .heading {
-  @apply w-2/4 flex flex-col gap-8;
+  @apply w-[40%] flex flex-col gap-12
+  2xl:w-[30%] xl:gap-12 lg:gap-8 md:gap-6;
 
   perspective: 600px;
   --webkit-perspective: 600px;
@@ -23,4 +25,9 @@
 
 .company-img {
   @apply mix-blend-luminosity hover:mix-blend-normal w-full h-full object-contain transition-all duration-300 ease-in-out;
+}
+
+.img {
+  @apply mix-blend-luminosity object-cover
+  w-full;
 }

@@ -24,7 +24,7 @@ export const hallOfFame: IHallOfFame[] = [
     profilePicURL: "user-2",
     name: "Hellen Jummy",
     role: "Medical Assistant",
-    bio: "I am excited about helping companies with their product development, management and strategy. I specialize in deep tech and hard analytical...",
+    bio: "I am excited about helping companies with their product development, management and strategy.",
     socialMedia: {
       linkedin: "https://www.linkedin.com/in/matthew-olaoluwa-b9a8b917b/",
     },
@@ -33,7 +33,7 @@ export const hallOfFame: IHallOfFame[] = [
     profilePicURL: "user-3",
     name: "Cameron Williamson",
     role: "Computer Technical Support Specialist",
-    bio: "My name is Jay Prakash Bind completed my B. Tech Computer Science and Engineering from Bundelkhand University, Jhansi. I rece",
+    bio: "My name is Jay Prakash Bind completed my B. Tech Computer Science and Engineering from Bundelkhand.",
     socialMedia: {
       linkedin: "https://www.linkedin.com/in/matthew-olaoluwa-b9a8b917b/",
     },
@@ -51,7 +51,7 @@ export const hallOfFame: IHallOfFame[] = [
     profilePicURL: "user-2",
     name: "Hellen Jummy",
     role: "Medical Assistant",
-    bio: "I am excited about helping companies with their product development, management and strategy. I specialize in deep tech and hard analytical...",
+    bio: "I am excited about helping companies with their product development, management and strategy.",
     socialMedia: {
       linkedin: "https://www.linkedin.com/in/matthew-olaoluwa-b9a8b917b/",
     },
@@ -60,7 +60,7 @@ export const hallOfFame: IHallOfFame[] = [
     profilePicURL: "user-3",
     name: "Cameron Williamson",
     role: "Computer Technical Support Specialist",
-    bio: "My name is Jay Prakash Bind completed my B. Tech Computer Science and Engineering from Bundelkhand University, Jhansi. I rece",
+    bio: "My name is Jay Prakash Bind completed my B. Tech Computer Science and Engineering from Bundelkhand.",
     socialMedia: {
       linkedin: "https://www.linkedin.com/in/matthew-olaoluwa-b9a8b917b/",
     },

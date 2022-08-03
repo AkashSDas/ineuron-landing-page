@@ -24,8 +24,10 @@ function HallOfFame() {
       { breakpoint: 1250, settings: { slidesToShow: 2.25 } },
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 960, settings: { slidesToShow: 1.75 } },
-      { breakpoint: 840, settings: { slidesToShow: 1.5 } },
-      { breakpoint: 760, settings: { slidesToShow: 1 } },
+      { breakpoint: 840, settings: { slidesToShow: 1.75 } },
+      { breakpoint: 760, settings: { slidesToShow: 1.2 } },
+      { breakpoint: 450, settings: { slidesToShow: 1 } },
+      { breakpoint: 360, settings: { slidesToShow: 0.65 } },
     ],
   };
 
