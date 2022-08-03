@@ -9,7 +9,8 @@
 .dropdown {
   @apply absolute top-[66px] bg-light-purple 
       border-2 border-white border-solid 
-      rounded-[12px] shadow-default flex;
+      rounded-[12px] shadow-default flex
+      z-10;
 }
 
 .item {

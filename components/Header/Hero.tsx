@@ -6,19 +6,19 @@ import styles from "@styles/components/Header/Hero.module.scss";
 
 function Hero() {
   return (
-    <section className={styles["hero-wrapper"]}>
+    <section className={`${styles["hero-wrapper"]} text-reveal-parent`}>
       <motion.h1
-        className={styles.heading}
-        initial={{ y: 40, opacity: 0 }}
-        animate={{
-          y: 0,
-          opacity: 1,
-          transition: {
-            ease: [0.6, 0.01, -0.05, 0.95],
-            duration: 1,
-            delay: 1.2,
-          },
-        }}
+        className={`${styles.heading} text-reveal-child text-[var(--color)]`}
+        // initial={{ y: 40, opacity: 0 }}
+        // animate={{
+        //   y: 0,
+        //   opacity: 1,
+        //   transition: {
+        //     ease: [0.6, 0.01, -0.05, 0.95],
+        //     duration: 1,
+        //     delay: 1.2,
+        //   },
+        // }}
       >
         Premium <span className="text-stroke">quality</span> and <br />{" "}
         <span className="text-stroke">affordable</span> price

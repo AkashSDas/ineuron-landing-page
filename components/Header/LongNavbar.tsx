@@ -52,11 +52,13 @@ function LongNavbar() {
         className={styles["nav-left"]}
       >
         <motion.img variants={item} src="/logo.svg" alt="iNeuron Logo" />
-        <motion.div variants={item}>{<CoursesDropDown />}</motion.div>
-        <motion.div variants={item}>
+        <motion.div variants={item} className="h-full">
+          {<CoursesDropDown />}
+        </motion.div>
+        <motion.div variants={item} className="h-full">
           <DropDown label="Products" items={products} />
         </motion.div>
-        <motion.div variants={item}>
+        <motion.div variants={item} className="h-full">
           <DropDown label="Company" items={companyItems} />
         </motion.div>
       </motion.ul>

@@ -1,10 +1,26 @@
 .hero-wrapper {
   @apply flex flex-col gap-[2rem] justify-center items-center;
+
+  // perspective: 600px;
+  // --webkit-perspective: 600px;
 }
 
 .heading {
   @apply text-center text-[90px] leading-[98px] text-dark-violet 
   font-medium;
+
+  // animation: intro 900ms ease;
+  // transform-origin: center top;
+  // transform-style: preserve-3d;
+}
+
+@keyframes intro {
+  0% {
+    transform: translate(0px, 130%) rotateX(-40deg);
+  }
+  100% {
+    transform: translate3d(0px, 0%) rotateX(0deg);
+  }
 }
 
 .description {
