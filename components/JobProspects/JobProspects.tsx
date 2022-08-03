@@ -17,6 +17,15 @@ function JobProspects() {
     centerMode: true,
     arrows: false,
     dot: false,
+    responsive: [
+      { breakpoint: 1280, settings: { slidesToShow: 3 } },
+      { breakpoint: 1024, settings: { slidesToShow: 2.5 } },
+      { breakpoint: 900, settings: { slidesToShow: 2 } },
+      { breakpoint: 768, settings: { slidesToShow: 1.5 } },
+      { breakpoint: 640, settings: { slidesToShow: 1.25 } },
+      { breakpoint: 481, settings: { slidesToShow: 1.15 } },
+      { breakpoint: 320, settings: { slidesToShow: 1 } },
+    ],
   };
 
   const companies = [
