@@ -9,18 +9,23 @@ interface Props {
 }
 
 function CourseCard({ coverImgURL, title, isLive, price, tags }: Props) {
+  const Tag = ({ emoji, label }: { emoji: string; label: string }) => (
+    <span className={styles["info-tag"]}>
+      <span>{emoji}</span>
+      <span>{label}</span>
+    </span>
+  );
+
   return (
     <div className={styles.card}>
-      <div className={styles.cover}>
-        <img src={coverImgURL} alt={title} />
-
-        <div className={styles["info-tags"]}>
-          {isLive ? <span className={styles["tag"]}>Live</span> : null}
-          {price ? <span className={styles["tag"]}>₹{price}</span> : null}
-        </div>
+      <div className={styles["info-tags"]}>
+        {isLive ? <Tag emoji="🔴" label="Live" /> : null}
+        {price ? <Tag emoji="🤩" label={`₹${price}`} /> : null}
       </div>
 
-      <h4 className="h4">{title}</h4>
+      <img className={styles.cover} src={coverImgURL} alt={title} />
+
+      <h4 className={`${styles.heading} h4`}>{title}</h4>
 
       <div className={styles["tags"]}>
         {tags.map((t) => (

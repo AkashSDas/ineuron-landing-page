@@ -1,4 +1,4 @@
-import { motion, MotionStyle } from "framer-motion";
+import { AnimatePresence, motion, MotionStyle } from "framer-motion";
 import { useState } from "react";
 import Slider from "react-slick";
 
@@ -42,6 +42,11 @@ function CoursesSlideShow() {
       rotateX: "0deg",
       transition: { ease: [0.6, 0.01, -0.05, 0.95], duration: 1 },
     },
+    exit: {
+      y: -20,
+      opacity: 0,
+      transition: { ease: [0.6, 0.01, -0.05, 0.95], duration: 1 },
+    },
   };
 
   const style: MotionStyle = {
@@ -75,17 +80,38 @@ function CoursesSlideShow() {
         </motion.div>
       </motion.div>
 
-      <Slider {...settings} className={styles.slider}>
-        {activeProgram.programs.map((prg) => (
-          <CourseCard
-            coverImgURL={prg.coverImgURL}
-            title={prg.title}
-            tags={prg.tags}
-            isLive={prg.isLive as any}
-            price={prg.price}
-          />
-        ))}
-      </Slider>
+      <motion.div
+        className="w-full -z-10"
+        style={style}
+        variants={{
+          initial: { y: "40px", x: "200px", opacity: 0 },
+          animate: {
+            y: "0px",
+            x: "0px",
+            opacity: 1,
+            transition: {
+              ease: [0.6, 0.01, -0.05, 0.95],
+              duration: 1,
+              delay: 0.3,
+            },
+          },
+        }}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
+        <Slider {...settings} className={`${styles.slider} course-slide-show`}>
+          {activeProgram.programs.map((prg) => (
+            <CourseCard
+              coverImgURL={prg.coverImgURL}
+              title={prg.title}
+              tags={prg.tags}
+              isLive={prg.isLive as any}
+              price={prg.price}
+            />
+          ))}
+        </Slider>
+      </motion.div>
     </section>
   );
 }

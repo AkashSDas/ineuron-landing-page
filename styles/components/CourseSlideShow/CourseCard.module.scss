@@ -1,31 +1,44 @@
-// Course Card
 .card {
   @apply w-[360px] 
-  flex flex-col gap-[10px] 
-  cursor-pointer;
+  flex flex-col
+  cursor-pointer relative
+  bg-light-purple rounded-[16px]
+  border-2 border-white border-solid
+  overflow-visible hover:shadow-default;
 }
 
-// Cover Image and Price/Live tags
 .cover {
-  @apply relative;
+  @apply w-[360px] h-[200px] rounded-[16px];
+}
 
-  img {
-    @apply w-[360px] h-[200px] rounded-[12px];
-  }
+.info-tags {
+  @apply absolute right-2 -top-4
+  px-3 py-[2px] bg-light-purple 
+  border border-white border-solid
+  rounded-[4px];
+}
 
-  .info-tags {
-    @apply flex gap-2 items-center absolute top-[80%] right-2;
+.info-tag {
+  @apply flex items-center justify-center gap-[6px] 
+  text-[13px] font-normal;
+}
 
-    .tag {
-      @apply text-[15px] text-dark-violet font-medium bg-light-purple px-2 py-1 rounded-[8px];
-    }
-  }
+.info-tag::after {
+  content: " | ";
+}
+
+.info-tag:last-of-type:after {
+  content: "";
+}
+
+.heading {
+  @apply px-2 py-1;
 }
 
 .tags {
-  @apply flex flex-wrap gap-2;
+  @apply flex flex-wrap gap-2 p-2;
 
   .tag {
-    @apply text-[13px] text-violet bg-light-purple p-1 rounded-[6px];
+    @apply text-[13px] text-violet bg-light-violet p-1 rounded-[6px];
   }
 }
