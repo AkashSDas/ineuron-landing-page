@@ -3,14 +3,14 @@
 }
 
 .heading {
-  @apply flex justify-between items-center w-full px-[8rem];
+  @apply flex justify-between items-center w-full px-[1rem] md:px-[4rem];
 
   perspective: 600px;
   --webkit-perspective: 600px;
 }
 
 .actions {
-  @apply flex items-center gap-[2rem];
+  @apply flex items-center gap-[0.5rem] flex-row md:gap-[2rem];
 }
 
 .slider {
