@@ -1,5 +1,7 @@
 .card {
-  @apply rounded-lg relative h-[360px] w-[120px] hover:w-[240px] transition-all duration-500 ease-out origin-center;
+  @apply rounded-lg relative h-[360px] w-[120px] 
+  hover:w-[240px] transition-all duration-500 ease-out 
+  origin-center;
 }
 
 .mask {
@@ -11,18 +13,25 @@
 }
 
 .info {
-  @apply p-4 absolute bottom-0 left-0 right-0 flex flex-col gap-2 justify-center items-center;
+  @apply p-4 absolute bottom-0 left-0 right-0 
+  flex flex-col gap-2 justify-center items-center;
 }
 
 .name {
-  @apply transition-all duration-300 ease-in-out text-center font-semibold text-white text-[15px];
+  @apply transition-all duration-300 ease-in-out 
+  text-center font-semibold text-white text-[15px];
 }
 
 .role {
-  @apply transition-all duration-300 ease-in-out text-center font-normal text-white text-[13px] hidden;
+  @apply transition-all duration-300 ease-in-out 
+  text-center font-normal text-white text-[13px] 
+  hidden;
 }
 
 .social {
-  @apply transition-all duration-300 ease-in-out hidden items-center justify-center gap-4 border-solid border-white border-[1.5px] bg-light-purple 
-  rounded-[6px] w-max cursor-pointer;
+  @apply transition-all duration-300 ease-in-out 
+  hidden 
+  items-center justify-center gap-4 
+  border-solid border-white border-[1.5px] 
+  bg-light-purple rounded-[6px] w-max cursor-pointer;
 }

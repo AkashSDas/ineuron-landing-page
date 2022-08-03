@@ -3,7 +3,7 @@
 }
 
 .board {
-  @apply flex gap-[2rem] justify-center;
+  @apply flex gap-[2rem] justify-center relative;
 }
 
 .btn-wrapper {

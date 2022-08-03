@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import { Linkedin } from "@components/Icons/Linkedin";
 import { YouTube } from "@components/Icons/YouTube";
 import { IInstructors } from "@lib/instructors";
@@ -6,13 +8,42 @@ import styles from "@styles/components/InstructorsGrid/InstructorsGridCard.modul
 function InstructorGridCard(props: IInstructors) {
   const { fullName, profilePicURL, role, socialMedia } = props;
 
-  const topPad = Math.floor(Math.random() * 6 + 1);
-  const bottomPad = Math.floor(Math.random() * 6 + 1);
+  const top = Math.round(Math.random() * 100);
+  const bottom = Math.round(Math.random() * 100);
 
   return (
-    <div className={`${styles.card} group`}>
+    <motion.div
+      className={`${styles.card} group`}
+      variants={{
+        initial: {
+          top: `${top + 30}px`,
+          bottom: `${bottom + 30}px`,
+          opacity: 0,
+        },
+        animate: {
+          // top: `${top}px`,
+          // bottom: `${bottom}px`,
+          top: "0px",
+          bottom: "0px",
+          opacity: 1,
+          transition: {
+            ease: [0.6, 0.01, -0.05, 0.95],
+            duration: 1,
+            delay: 0.6,
+          },
+        },
+      }}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+    >
       <div className={styles.mask}></div>
-      <img className={styles.img} src={profilePicURL} alt={fullName} />
+      <motion.img
+        className={styles.img}
+        src={profilePicURL}
+        alt={fullName}
+        whileHover={{ scale: 1.1 }}
+      />
 
       <div className={styles.info}>
         <p className={styles.name}>{fullName}</p>
@@ -23,7 +54,7 @@ function InstructorGridCard(props: IInstructors) {
           {socialMedia.youtube ? <YouTube /> : null}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
