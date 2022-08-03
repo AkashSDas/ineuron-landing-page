@@ -109,28 +109,6 @@ function OurProducts() {
           title="Internship Portal"
           description="iNeuron's self-paced internship portal prioritises hands-on training with 570+ internship projects."
         />
-      </motion.div>
-
-      <motion.div
-        className={styles.container}
-        style={style}
-        variants={{
-          initial: { y: "130%", opacity: 0, rotateX: "-40deg" },
-          animate: {
-            y: "0%",
-            opacity: 1,
-            rotateX: "0deg",
-            transition: {
-              ease: [0.6, 0.01, -0.05, 0.95],
-              duration: 1,
-              delay: 0.3,
-            },
-          },
-        }}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-      >
         <Card
           icon={<HallOfFame />}
           title="Hall of Fame"
