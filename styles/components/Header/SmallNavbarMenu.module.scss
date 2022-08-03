@@ -1,0 +1,9 @@
+.wrapper {
+  @apply w-full bg-light-violet h-full z-50
+  flex flex-col gap-[10px] px-8 py-4 top-[74px] left-0 right-0 bottom-0
+  fixed;
+}
+
+.item {
+  @apply flex justify-center items-center gap-[1.5rem];
+}
