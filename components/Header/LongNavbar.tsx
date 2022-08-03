@@ -36,7 +36,7 @@ function LongNavbar() {
 
   const container2 = {
     animate: {
-      transition: { delayChildren: 0.9, staggerChildren: 0.2 },
+      transition: { delayChildren: 0.9, staggerChildren: 0.1 },
     },
   };
 
