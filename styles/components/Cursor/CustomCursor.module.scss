@@ -43,12 +43,46 @@
 
 .scale {
   &::before {
-    transform: scale(2) !important;
+    transform: scale(3) !important;
   }
 }
 
 .cursor-white {
   &::before {
     background: white;
+  }
+}
+
+.exclusion {
+  @supports (mix-blend-mode: exclusion) {
+    mix-blend-mode: exclusion;
+  }
+
+  &:before {
+    @supports (mix-blend-mode: exclusion) {
+      background: white;
+    }
+  }
+}
+
+.cursor-scale-gif {
+  mix-blend-mode: exclusion;
+  transition: all 0.3s ease-out;
+
+  .cursor-gif {
+    transform: scale(1);
+    filter: invert(1);
+    transition: all 0.3s ease-out;
+  }
+}
+
+.cursor-gif {
+  @apply h-[350px] w-[350px] block overflow-hidden rounded-[100%] scale-0
+  relative;
+  margin: -175px 0 0 -175px;
+
+  img {
+    @apply h-[350px] left-[50%] absolute object-cover;
+    transform: translateX(-50%);
   }
 }

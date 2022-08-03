@@ -34,9 +34,20 @@ function Hero() {
       initial="initial"
       animate="animate"
     >
-      <motion.h1 className={styles.heading} style={style} variants={item}>
-        Premium <span className="text-stroke">quality</span> and <br />{" "}
-        <span className="text-stroke">affordable</span> price
+      <motion.h1
+        className={`${styles.heading} cursor-scale cursor-scale-gif`}
+        style={style}
+        variants={item}
+      >
+        Premium{" "}
+        <span data-gif-src="premium" className="text-stroke">
+          quality
+        </span>{" "}
+        and <br />{" "}
+        <span data-gif-src="affordable" className="text-stroke">
+          affordable
+        </span>{" "}
+        price
       </motion.h1>
 
       <motion.p className={styles.description} style={style} variants={item}>
