@@ -26,6 +26,16 @@ function Hackathon() {
     autoplaySpeed: 2000,
     cssEase: "cubic-bezier(0.85, 0, 0.15, 1)",
     centerMode: true,
+    responsive: [
+      { breakpoint: 1280, settings: { slidesToShow: 3 } },
+      { breakpoint: 1250, settings: { slidesToShow: 2.25 } },
+      { breakpoint: 1024, settings: { slidesToShow: 1 } },
+      { breakpoint: 960, settings: { slidesToShow: 0.9 } },
+      { breakpoint: 840, settings: { slidesToShow: 1.75 } },
+      { breakpoint: 760, settings: { slidesToShow: 1.4 } },
+      { breakpoint: 500, settings: { slidesToShow: 0.75 } },
+      { breakpoint: 360, settings: { slidesToShow: 0.5 } },
+    ],
   };
 
   const CompanyCard = ({ url }) => (
@@ -184,7 +194,7 @@ function Hackathon() {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="mix-blend-luminosity"
+        className={styles.img}
         src="/hackathon.png"
         alt="Hackathon"
       />

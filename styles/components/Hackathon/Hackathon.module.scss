@@ -1,11 +1,17 @@
 .wrapper {
-  @apply flex flex-col-reverse lg:flex-row gap-14 lg:justify-center items-center
-  md:gap-6 lg:gap-8 xl:gap-14 px-4;
+  @apply flex flex-col-reverse gap-8 p-0
+  md:flex-row md:justify-center md:items-center 
+  md:px-8;
+}
+
+.img {
+  @apply mix-blend-luminosity object-cover
+  w-full h-[200px]
+  md:w-[50%] md:h-full;
 }
 
 .heading {
-  @apply w-[40%] flex flex-col gap-12
-  2xl:w-[30%] xl:gap-12 lg:gap-8 md:gap-6;
+  @apply px-2 sm:px-8 md:px-0 md:w-[50%];
 
   perspective: 600px;
   --webkit-perspective: 600px;
@@ -16,7 +22,7 @@
 }
 
 .subtitle {
-  @apply mb-8 text-[23px] text-dark-violet font-medium;
+  @apply mt-8 mb-4 text-[23px] text-dark-violet font-medium;
 }
 
 .company-card {
@@ -25,9 +31,4 @@
 
 .company-img {
   @apply mix-blend-luminosity hover:mix-blend-normal w-full h-full object-contain transition-all duration-300 ease-in-out;
-}
-
-.img {
-  @apply mix-blend-luminosity object-cover
-  w-full;
 }
