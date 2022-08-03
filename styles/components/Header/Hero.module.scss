@@ -6,7 +6,8 @@
 }
 
 .heading {
-  @apply text-center text-[90px] leading-[98px] text-dark-violet 
+  @apply text-center text-[30px] leading-[30px] sm:text-[60px] sm:leading-[60px] 
+  md:text-[90px] md:leading-[98px] text-dark-violet 
   font-medium;
 
   animation: textReveal 900ms;
@@ -28,5 +29,5 @@
 }
 
 .description {
-  @apply text-grey text-[23px] text-center w-[45%];
+  @apply text-grey text-[23px] text-center w-[90%] sm:w-[60%] md:w-[45%];
 }
