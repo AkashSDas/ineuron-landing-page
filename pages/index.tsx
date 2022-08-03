@@ -11,7 +11,7 @@ import OurProducts from "@components/OurProducts/OurProducts";
 
 export default function HomePage() {
   return (
-    <>
+    <div className="-visible">
       <LongNavbar />
 
       <main className="mt-[150px] flex flex-col gap-[150px]">
@@ -26,6 +26,6 @@ export default function HomePage() {
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 }
