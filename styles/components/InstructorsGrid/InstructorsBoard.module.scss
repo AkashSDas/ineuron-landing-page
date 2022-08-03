@@ -6,7 +6,7 @@
 }
 
 .board {
-  @apply flex gap-[2rem] justify-center relative;
+  @apply flex gap-[2rem] justify-center relative flex-wrap;
 }
 
 .btn-wrapper {
