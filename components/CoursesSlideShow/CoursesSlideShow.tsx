@@ -58,7 +58,7 @@ function CoursesSlideShow() {
   return (
     <section className={styles.wrapper}>
       <motion.div
-        className={styles.heading}
+        className={`${styles.heading} z-10`}
         variants={container}
         initial="initial"
         animate="animate"
@@ -81,7 +81,7 @@ function CoursesSlideShow() {
       </motion.div>
 
       <motion.div
-        className="w-full -z-10"
+        className="w-full"
         style={style}
         variants={{
           initial: { y: "40px", x: "200px", opacity: 0 },
