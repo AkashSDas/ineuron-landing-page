@@ -5,11 +5,13 @@
 }
 
 .h3 {
-  @apply text-dark-violet text-[40px] font-medium;
+  @apply text-dark-violet font-medium
+  text-[30px] lg:text-[40px];
 }
 
 .h2 {
-  @apply text-dark-violet text-[60px] font-medium;
+  @apply text-dark-violet font-medium
+  text-[40px] md:text-[50px] lg:text-[50px] xl:text-[60px];
 }
 
 .text-stroke {
