@@ -2,6 +2,7 @@ import { AnimatePresence, motion, MotionStyle } from "framer-motion";
 import { useState } from "react";
 import Slider from "react-slick";
 
+import TextButton from "@components/Button/TextButton";
 import { affordableCourses, liveCouses } from "@lib/courses";
 import styles from "@styles/components/CourseSlideShow/CoursesSlideShow.module.scss";
 
@@ -68,7 +69,7 @@ function CoursesSlideShow() {
         </motion.h3>
 
         <motion.div className={styles.actions} style={style} variants={item}>
-          <button className="text-btn">View More</button>
+          <TextButton label="View More" />
           <CoursesSlideShowDropDown
             activeProgram={activeProgram}
             programTitles={programsTitles}

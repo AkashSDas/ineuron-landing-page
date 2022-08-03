@@ -1,8 +1,3 @@
-.btn {
-  @apply h-[50px] text-black hover:bg-light-violet 
-  px-[2rem] rounded-full;
-}
-
 .roller {
   $transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
 
@@ -22,7 +17,7 @@
     &::after,
     &::before {
       content: attr(data-label);
-      @apply text-black;
+      color: attr(data-color);
       display: block;
       position: absolute;
       transition: $transition;
@@ -35,7 +30,7 @@
     }
 
     &::before {
-      top: 25%;
+      top: 0;
       transform: skewY(0);
       transform-origin: right bottom;
     }
@@ -44,7 +39,7 @@
   &:hover {
     span {
       &::after {
-        top: 25%;
+        top: 0;
         transform: skewY(0);
         transform-origin: left top;
       }

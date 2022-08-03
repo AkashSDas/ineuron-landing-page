@@ -1,11 +1,44 @@
+import TextRollAnimation from "@components/Animations/TextRollAnimation";
 import Facebook from "@components/Icons/Facebook";
 import { Linkedin } from "@components/Icons/Linkedin";
 import Location from "@components/Icons/Location";
 import Mail from "@components/Icons/Mail";
 import Twitter from "@components/Icons/Twitter";
 import { YouTube } from "@components/Icons/YouTube";
+import styles from "@styles/components/Footer/Footer.module.scss";
 
 function Footer() {
+  const Roller = ({ label }: { label: string }) => (
+    <div className={styles["nav-item-roller"]}>
+      <span data-label={label}>{label}</span>
+    </div>
+  );
+
+  const Roller2 = ({ label }: { label: string }) => (
+    <div className={styles["nav-heading-roller"]}>
+      <span data-label={label}>{label}</span>
+    </div>
+  );
+
+  const company = [
+    "About Us",
+    "Contact Us",
+    "Hackathon",
+    "Job Guarantee",
+    "Job Assistance",
+    "FAQs",
+    "Privacy Policy",
+    "Terms & Conditions",
+  ];
+
+  const products = [
+    "Job Portal",
+    "Internship Portal",
+    "Become an Affiliate",
+    "Hall of Fame",
+    "InBlog",
+  ];
+
   return (
     <footer className="mt-[150px] bg-light-purple border-t-2 border-white p-[var(--nav-x-pad)] flex gap-12">
       <div className="flex-grow flex flex-col gap-3">
@@ -42,50 +75,27 @@ function Footer() {
       </div>
 
       <ul className="flex flex-col gap-2">
-        <li className="font-medium text-black text-[18px]">Company</li>
-        <li className="cursor-pointer text-grey hover:text-black text-[15px]">
-          About Us
+        <li>
+          <Roller2 label="Company" />
         </li>
-        <li className="cursor-pointer text-grey hover:text-black text-[15px]">
-          Contact Us
-        </li>
-        <li className="cursor-pointer text-grey hover:text-black text-[15px]">
-          Hackathon
-        </li>
-        <li className="cursor-pointer text-grey hover:text-black text-[15px]">
-          Job Guarantee
-        </li>
-        <li className="cursor-pointer text-grey hover:text-black text-[15px]">
-          Job Assistance
-        </li>
-        <li className="cursor-pointer text-grey hover:text-black text-[15px]">
-          FAQs
-        </li>
-        <li className="cursor-pointer text-grey hover:text-black text-[15px]">
-          Privacy Policy
-        </li>
-        <li className="cursor-pointer text-grey hover:text-black text-[15px]">
-          Terms & Conditions
-        </li>
+
+        {company.map((label) => (
+          <li className={styles.li}>
+            <Roller label={label} />
+          </li>
+        ))}
       </ul>
 
       <ul className="flex flex-col gap-2">
-        <li className="font-medium text-black text-[18px]">Products</li>
-        <li className="cursor-pointer text-grey hover:text-black text-[15px]">
-          Job Portal
+        <li>
+          <Roller2 label="Products" />
         </li>
-        <li className="cursor-pointer text-grey hover:text-black text-[15px]">
-          Internship Portal
-        </li>
-        <li className="cursor-pointer text-grey hover:text-black text-[15px]">
-          Become an Affiliate
-        </li>
-        <li className="cursor-pointer text-grey hover:text-black text-[15px]">
-          Hall of Fame
-        </li>
-        <li className="cursor-pointer text-grey hover:text-black text-[15px]">
-          InBlog
-        </li>
+
+        {products.map((label) => (
+          <li className={styles.li}>
+            <Roller label={label} />
+          </li>
+        ))}
       </ul>
     </footer>
   );
