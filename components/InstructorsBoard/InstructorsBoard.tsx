@@ -1,3 +1,4 @@
+import { motion, MotionStyle } from "framer-motion";
 import Slider from "react-slick";
 
 import TextButton from "@components/Button/TextButton";
@@ -22,11 +23,36 @@ function InstructorsBoard() {
     variableWidth: true,
   };
 
+  const style: MotionStyle = {
+    transformOrigin: "center top",
+    transformStyle: "preserve-3d",
+    willChange: "auto",
+  };
+
   return (
     <section className={styles.wrapper}>
-      <h2 className="h2 text-center mb-8">
+      <motion.h2
+        className="h2 text-center mb-8"
+        style={style}
+        variants={{
+          initial: { y: "80%", opacity: 0, rotateX: "-40deg" },
+          animate: {
+            y: "0%",
+            opacity: 1,
+            rotateX: "0deg",
+            transition: {
+              ease: [0.6, 0.01, -0.05, 0.95],
+              duration: 1,
+              delay: 0.3,
+            },
+          },
+        }}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
         Learn from the <span className="text-stroke">BEST</span>
-      </h2>
+      </motion.h2>
 
       <div className={styles.board}>
         {instructors.map((i) => (

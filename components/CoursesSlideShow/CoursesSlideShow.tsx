@@ -1,3 +1,4 @@
+import { motion, MotionStyle } from "framer-motion";
 import { useState } from "react";
 import Slider from "react-slick";
 
@@ -27,12 +28,41 @@ function CoursesSlideShow() {
     dot: false,
   };
 
+  const container = {
+    animate: {
+      transition: { delayChildren: 1.8, staggerChildren: 0.1 },
+    },
+  };
+
+  const item = {
+    initial: { y: "130%", opacity: 0, rotateX: "-40deg" },
+    animate: {
+      y: "0%",
+      opacity: 1,
+      rotateX: "0deg",
+      transition: { ease: [0.6, 0.01, -0.05, 0.95], duration: 1 },
+    },
+  };
+
+  const style: MotionStyle = {
+    transformOrigin: "center top",
+    transformStyle: "preserve-3d",
+    willChange: "auto",
+  };
+
   return (
     <section className={styles.wrapper}>
-      <div className={styles.heading}>
-        <h3 className="h3">{activeProgram.title}</h3>
+      <motion.div
+        className={styles.heading}
+        variants={container}
+        initial="initial"
+        animate="animate"
+      >
+        <motion.h3 className="h3" style={style} variants={item}>
+          {activeProgram.title}
+        </motion.h3>
 
-        <div className={styles.actions}>
+        <motion.div className={styles.actions} style={style} variants={item}>
           <button className="text-btn">View More</button>
           <CoursesSlideShowDropDown
             activeProgram={activeProgram}
@@ -42,8 +72,8 @@ function CoursesSlideShow() {
             isOpen={isOpen}
             setIsOpen={setIsOpen}
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       <Slider {...settings} className={styles.slider}>
         {activeProgram.programs.map((prg) => (
