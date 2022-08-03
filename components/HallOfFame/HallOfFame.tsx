@@ -19,6 +19,14 @@ function HallOfFame() {
     autoplaySpeed: 2000,
     centerMode: true,
     cssEase: "cubic-bezier(0.85, 0, 0.15, 1)",
+    responsive: [
+      { breakpoint: 1280, settings: { slidesToShow: 2.5 } },
+      { breakpoint: 1250, settings: { slidesToShow: 2.25 } },
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 960, settings: { slidesToShow: 1.75 } },
+      { breakpoint: 840, settings: { slidesToShow: 1.5 } },
+      { breakpoint: 760, settings: { slidesToShow: 1 } },
+    ],
   };
 
   const container = {
