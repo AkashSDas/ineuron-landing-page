@@ -1,0 +1,19 @@
+.text-reveal-parent {
+  perspective: 600px;
+  --webkit-perspective: 600px;
+}
+
+@keyframes textReveal {
+  0% {
+    transform: translate(0px, 130%) rotateX(-40deg);
+  }
+  100% {
+    transform: translate3d(0px, 0%) rotateX(0deg);
+  }
+}
+
+.text-reveal-child {
+  animation: intro 900ms ease;
+  transform-origin: center top;
+  transform-style: preserve-3d;
+}
