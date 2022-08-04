@@ -12,6 +12,8 @@ This is my submission for [Hackathon for Javascript](https://www.findcoder.io/ch
 - 🦄 Custom Cursor
 - 🪗 Tailwind CSS Design System
 
+![Gif](docs/cover-gif.gif)
+
 ## Get Started
 
 **Get the project ready and run it**
