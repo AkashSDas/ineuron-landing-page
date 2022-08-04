@@ -1,9 +1,15 @@
 .wrapper {
   @apply w-full bg-light-violet h-full z-50
-  flex flex-col gap-[10px] px-8 py-4 top-[74px] left-0 right-0 bottom-0
+  flex flex-col gap-[10px] px-2 py-2 top-[74px] left-0 right-0 bottom-0
   fixed md:hidden;
 }
 
 .item {
-  @apply flex justify-center items-center gap-[1.5rem];
+  @apply flex justify-center items-center gap-[1.5rem] hover:bg-light-purple
+  px-4 py-2 rounded-lg;
+}
+
+.item2 {
+  @apply flex justify-start items-center gap-[1.5rem] hover:bg-light-purple
+  px-4 py-2 rounded-lg;
 }
