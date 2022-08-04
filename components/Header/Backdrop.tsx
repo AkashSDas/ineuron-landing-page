@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import styles from "@styles/components/Header/Backdrop.module.scss";
 

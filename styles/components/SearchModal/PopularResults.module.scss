@@ -1,0 +1,26 @@
+.wrapper {
+  @apply p-2;
+
+  perspective: 600px;
+  --webkit-perspective: 600px;
+}
+
+.courses {
+  @apply flex flex-col gap-2 mt-2;
+}
+
+.course {
+  @apply flex gap-4 cursor-pointer hover:bg-light-violet;
+}
+
+.tags {
+  @apply flex flex-wrap gap-2;
+
+  .tag {
+    @apply text-[13px] text-violet bg-light-violet p-1 rounded-[6px];
+  }
+}
+
+.heading {
+  @apply text-dark-violet;
+}

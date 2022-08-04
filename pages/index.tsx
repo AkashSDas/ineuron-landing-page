@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion";
 import { useContext, useEffect } from "react";
 
 import CoursesSlideShow from "@components/CoursesSlideShow/CoursesSlideShow";
@@ -32,6 +33,7 @@ export default function HomePage() {
     <div className="-visible">
       <LongNavbar />
       <SmallNavbar />
+
       {searchModalIsOpen ? <SearchModal /> : null}
 
       <main className={`mt-[150px] flex flex-col gap-[150px]`}>
