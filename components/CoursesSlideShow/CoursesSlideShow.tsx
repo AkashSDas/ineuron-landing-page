@@ -34,8 +34,8 @@ function CoursesSlideShow() {
       { breakpoint: 1280, settings: { slidesToShow: 2.5 } },
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 900, settings: { slidesToShow: 1.75 } },
-      { breakpoint: 768, settings: { slidesToShow: 1.5 } },
-      { breakpoint: 640, settings: { slidesToShow: 1 } },
+      { breakpoint: 700, settings: { slidesToShow: 1.5 } },
+      { breakpoint: 460, settings: { slidesToShow: 0.95 } },
     ],
   };
 

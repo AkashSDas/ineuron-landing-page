@@ -1,5 +1,5 @@
 .card {
-  @apply w-[360px] 
+  @apply w-[250px] sm:w-[360px] 
   flex flex-col
   cursor-pointer relative
   bg-light-purple rounded-[16px]
@@ -8,7 +8,8 @@
 }
 
 .cover {
-  @apply w-[360px] h-[200px] rounded-[16px];
+  // @apply w-[360px] h-[200px] rounded-[16px];
+  @apply w-[250px] h-[150px] sm:w-[360px] sm:h-[p200px] rounded-[16px];
 }
 
 .info-tags {
@@ -32,13 +33,13 @@
 }
 
 .heading {
-  @apply px-2 py-1 mt-2;
+  @apply px-2 py-1 mt-2 text-[13px] sm:text-[18px];
 }
 
 .tags {
   @apply flex flex-wrap gap-2 p-2;
 
   .tag {
-    @apply text-[13px] text-violet bg-light-violet p-1 rounded-[6px];
+    @apply text-[10px] sm:text-[13px] text-violet bg-light-violet p-1 rounded-[6px];
   }
 }

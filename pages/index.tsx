@@ -35,7 +35,7 @@ export default function HomePage() {
 
       {searchModalIsOpen ? <SearchModal /> : null}
 
-      <main className={`mt-[150px] flex flex-col gap-[150px]`}>
+      <main className={`mt-[150px] flex flex-col gap-[75px] md:gap-[150px]`}>
         {isOpen ? <SmallNavbarMenu /> : null}
         <Hero />
         <CoursesSlideShow />
