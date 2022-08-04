@@ -1,4 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/Poppins/Poppins-Black.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/Poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/Poppins/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/Poppins/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/Poppins/Poppins-Regular.ttf");
+}
 
 .h4 {
   @apply text-[18px] font-semibold text-black;
