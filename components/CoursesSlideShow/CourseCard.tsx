@@ -29,7 +29,9 @@ function CourseCard({ coverImgURL, title, isLive, price, tags }: Props) {
 
       <div className={styles["tags"]}>
         {tags.map((t) => (
-          <span className={styles["tag"]}>{t}</span>
+          <span key={t} className={styles["tag"]}>
+            {t}
+          </span>
         ))}
       </div>
     </div>

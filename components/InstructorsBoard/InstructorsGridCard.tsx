@@ -50,8 +50,16 @@ function InstructorGridCard(props: IInstructors) {
         <p className={`${styles.role} group-hover:block`}>{role}</p>
 
         <div className={`${styles.social} group-hover:flex`}>
-          {socialMedia.linkedin ? <Linkedin /> : null}
-          {socialMedia.youtube ? <YouTube /> : null}
+          {socialMedia.linkedin ? (
+            <a href={socialMedia.linkedin} target="_blank">
+              <Linkedin />
+            </a>
+          ) : null}
+          {socialMedia.youtube ? (
+            <a href={socialMedia.youtube} target="_blank">
+              <YouTube />
+            </a>
+          ) : null}
         </div>
       </div>
     </motion.div>

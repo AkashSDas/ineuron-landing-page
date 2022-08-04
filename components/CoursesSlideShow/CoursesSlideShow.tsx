@@ -111,6 +111,7 @@ function CoursesSlideShow() {
         <Slider {...settings} className={`${styles.slider} course-slide-show`}>
           {activeProgram.programs.map((prg) => (
             <CourseCard
+              key={prg.title}
               coverImgURL={prg.coverImgURL}
               title={prg.title}
               tags={prg.tags}
