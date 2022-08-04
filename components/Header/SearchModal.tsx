@@ -73,7 +73,7 @@ function SearchModal() {
           className={styles.tags}
         >
           {tags.map((t) => (
-            <motion.span variants={item} className={styles.tag}>
+            <motion.span key={t} variants={item} className={styles.tag}>
               {t}
             </motion.span>
           ))}

@@ -47,7 +47,11 @@ function CoursesSlideShowDropDown(props: Props) {
       {programTitles
         .filter((t) => t !== activeProgram.title)
         .map((t) => (
-          <div className={styles["option"]} onClick={handleOptionClick(t)}>
+          <div
+            key={t}
+            className={styles["option"]}
+            onClick={handleOptionClick(t)}
+          >
             {t}
           </div>
         ))}

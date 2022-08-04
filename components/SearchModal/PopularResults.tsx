@@ -69,14 +69,20 @@ function PopularResults() {
         className={styles.courses}
       >
         {courses.map((course) => (
-          <motion.div variants={item} className={styles.course}>
+          <motion.div
+            key={course.title}
+            variants={item}
+            className={styles.course}
+          >
             <motion.img src={course.posterImgURL} alt={course.title} />
 
             <motion.div className={styles.courseInfo}>
               <motion.h4>{course.title}</motion.h4>
               <motion.p className={styles.tags}>
                 {course.tags.map((t) => (
-                  <span className={styles.tag}>{t}</span>
+                  <span key={t} className={styles.tag}>
+                    {t}
+                  </span>
                 ))}
               </motion.p>
             </motion.div>

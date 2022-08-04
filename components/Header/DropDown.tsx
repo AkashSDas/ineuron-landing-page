@@ -23,7 +23,9 @@ function DropDown({ label, items }: Props) {
     >
       <div className={styles.items}>
         {items.map((item) => (
-          <div className={styles.item}>{item}</div>
+          <div key={item} className={styles.item}>
+            {item}
+          </div>
         ))}
       </div>
     </motion.div>

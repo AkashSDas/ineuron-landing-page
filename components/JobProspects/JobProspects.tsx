@@ -160,13 +160,13 @@ function JobProspects() {
 
       <Slider {...settings} className={styles.slider1}>
         {companies.map((company) => (
-          <CompanyCard imgURL={`/companies/${company}.png`} />
+          <CompanyCard key={company} imgURL={`/companies/${company}.png`} />
         ))}
       </Slider>
 
       <Slider {...settings} rtl={true} className={styles.slider2}>
         {companies2.map((company) => (
-          <CompanyCard imgURL={`/companies/${company}.png`} />
+          <CompanyCard key={company} imgURL={`/companies/${company}.png`} />
         ))}
       </Slider>
     </motion.section>
