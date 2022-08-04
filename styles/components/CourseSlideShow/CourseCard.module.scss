@@ -12,7 +12,7 @@
 }
 
 .info-tags {
-  @apply absolute right-2 -top-4
+  @apply absolute right-2 top-2
   px-3 py-[2px] bg-light-purple 
   border border-white border-solid
   rounded-[4px] flex gap-1;
