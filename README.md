@@ -25,4 +25,4 @@ yarn run dev
 
 ## License
 
-![MIT]("./LICENSE")
+[MIT](LICENSE)
