@@ -1,9 +1,10 @@
 import { AnimatePresence, motion, MotionStyle } from "framer-motion";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import Slider from "react-slick";
 
 import TextButton from "@components/Button/TextButton";
-import { affordableCourses, liveCouses } from "@lib/courses";
+import { affordableCourses, communityCourses, liveCourses } from "@lib/courses";
 import styles from "@styles/components/CourseSlideShow/CoursesSlideShow.module.scss";
 
 import CourseCard from "./CourseCard";
@@ -11,9 +12,11 @@ import CoursesSlideShowDropDown from "./CoursesSlideShowDropDown";
 
 function CoursesSlideShow() {
   const [isOpen, setIsOpen] = useState(false);
-  const programsTitles = [liveCouses, affordableCourses].map((p) => p.title);
-  const programs = [liveCouses, affordableCourses];
-  const [activeProgram, setActiveProgram] = useState(liveCouses);
+  const programsTitles = [liveCourses, affordableCourses, communityCourses].map(
+    (p) => p.title
+  );
+  const programs = [liveCourses, affordableCourses, communityCourses];
+  const [activeProgram, setActiveProgram] = useState(liveCourses);
 
   // Slider settings
   const settings = {
@@ -63,6 +66,8 @@ function CoursesSlideShow() {
     willChange: "auto",
   };
 
+  const router = useRouter();
+
   return (
     <section className={styles.wrapper}>
       <motion.div
@@ -76,7 +81,10 @@ function CoursesSlideShow() {
         </motion.h3>
 
         <motion.div className={styles.actions} style={style} variants={item}>
-          <TextButton label="View More" />
+          <a href="https://ineuron.ai/courses" target="_blank">
+            <TextButton label="View More" />
+          </a>
+
           <CoursesSlideShowDropDown
             activeProgram={activeProgram}
             programTitles={programsTitles}
@@ -110,14 +118,16 @@ function CoursesSlideShow() {
       >
         <Slider {...settings} className={`${styles.slider} course-slide-show`}>
           {activeProgram.programs.map((prg) => (
-            <CourseCard
-              key={prg.title}
-              coverImgURL={prg.coverImgURL}
-              title={prg.title}
-              tags={prg.tags}
-              isLive={prg.isLive as any}
-              price={prg.price}
-            />
+            <a href={prg.link} target="_blank">
+              <CourseCard
+                key={prg.title}
+                coverImgURL={prg.coverImgURL}
+                title={prg.title}
+                tags={prg.tags}
+                isLive={prg.isLive as any}
+                price={prg.price}
+              />
+            </a>
           ))}
         </Slider>
       </motion.div>

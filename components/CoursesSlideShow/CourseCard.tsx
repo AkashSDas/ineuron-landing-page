@@ -20,7 +20,13 @@ function CourseCard({ coverImgURL, title, isLive, price, tags }: Props) {
     <div className={styles.card}>
       <div className={styles["info-tags"]}>
         {isLive ? <Tag emoji="🔴" label="Live" /> : null}
-        {price ? <Tag emoji="🤩" label={`₹${price}`} /> : null}
+        {price !== null ? (
+          price === 0 ? (
+            <Tag emoji="🔥" label="Free" />
+          ) : (
+            <Tag emoji="🤩" label={`₹${price}`} />
+          )
+        ) : null}
       </div>
 
       <img className={styles.cover} src={coverImgURL} alt={title} />
