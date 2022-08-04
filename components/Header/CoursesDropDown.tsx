@@ -29,10 +29,12 @@ function CoursesDropDown() {
 
         return (
           <div
+            key={c.mainCourse}
             className={`${styles["course-item"]} ${style}`}
             onMouseEnter={() => updateActiveCourse(c)}
           >
-            {c.mainCourse} <ArrowRight className="stroke-grey" />
+            {c.mainCourse + Math.random().toString()}{" "}
+            <ArrowRight className="stroke-grey" />
           </div>
         );
       })}
@@ -48,7 +50,9 @@ function CoursesDropDown() {
         {dropdownCourses
           .filter((c) => c.mainCourse === activeCourse?.mainCourse)[0]
           ?.subCourses.map((c) => (
-            <div className={styles["course-item"]}>{c}</div>
+            <div key={c} className={styles["course-item"]}>
+              {c}
+            </div>
           ))}
       </div>
     );

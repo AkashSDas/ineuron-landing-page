@@ -171,7 +171,7 @@ function Hackathon() {
           >
             <Slider {...settings} className="w-full">
               {companies.map((company) => (
-                <CompanyCard url={`/companies/${company}.png`} />
+                <CompanyCard key={company} url={`/companies/${company}.png`} />
               ))}
             </Slider>
           </motion.div>
