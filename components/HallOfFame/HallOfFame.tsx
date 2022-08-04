@@ -38,7 +38,7 @@ function HallOfFame() {
   };
 
   return (
-    <section>
+    <section className="overflow-clip">
       <motion.div className={styles.heading}>
         <motion.h3
           className="h3 text-dark-violet"
@@ -106,7 +106,7 @@ function HallOfFame() {
         whileInView="animate"
         viewport={{ once: true }}
       >
-        <Slider {...settings} className="w-full">
+        <Slider {...settings} className="w-full overflow-clip">
           {hallOfFame.map((u) => (
             <HallOfFameCard
               key={u.name}

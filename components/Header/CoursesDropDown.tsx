@@ -33,8 +33,7 @@ function CoursesDropDown() {
             className={`${styles["course-item"]} ${style}`}
             onMouseEnter={() => updateActiveCourse(c)}
           >
-            {c.mainCourse + Math.random().toString()}{" "}
-            <ArrowRight className="stroke-grey" />
+            {c.mainCourse} <ArrowRight className="stroke-grey" />
           </div>
         );
       })}

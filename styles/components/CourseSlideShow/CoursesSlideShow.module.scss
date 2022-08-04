@@ -1,5 +1,5 @@
 .wrapper {
-  @apply flex flex-col justify-center items-center gap-[3rem];
+  @apply flex flex-col justify-center items-center gap-[3rem] overflow-clip;
 }
 
 .heading {
@@ -14,5 +14,5 @@
 }
 
 .slider {
-  @apply w-full;
+  @apply w-full overflow-clip;
 }
