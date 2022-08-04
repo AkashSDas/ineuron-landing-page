@@ -31,22 +31,6 @@ function HallOfFame() {
     ],
   };
 
-  const container = {
-    animate: {
-      transition: { delayChildren: 0.4, staggerChildren: 0.2 },
-    },
-  };
-
-  const item = {
-    initial: { y: "130%", opacity: 0, rotateX: "-40deg" },
-    animate: {
-      y: "0%",
-      opacity: 1,
-      rotateX: "0deg",
-      transition: { ease: [0.6, 0.01, -0.05, 0.95], duration: 1 },
-    },
-  };
-
   const style: MotionStyle = {
     transformOrigin: "center top",
     transformStyle: "preserve-3d",
@@ -55,12 +39,7 @@ function HallOfFame() {
 
   return (
     <section>
-      <motion.div
-        className={styles.heading}
-        variants={container}
-        initial="initial"
-        whileInView="animate"
-      >
+      <motion.div className={styles.heading}>
         <motion.h3
           className="h3 text-dark-violet"
           style={style}
@@ -130,11 +109,13 @@ function HallOfFame() {
         <Slider {...settings} className="w-full">
           {hallOfFame.map((u) => (
             <HallOfFameCard
+              key={u.name}
               bio={u.bio}
               name={u.name}
               profilePicURL={u.profilePicURL}
               role={u.role}
               socialMedia={u.socialMedia}
+              link={u.link}
             />
           ))}
         </Slider>
