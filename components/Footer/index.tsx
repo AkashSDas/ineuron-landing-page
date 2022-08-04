@@ -75,24 +75,24 @@ function Footer() {
       </div>
 
       <ul className="flex flex-col gap-2">
-        <li>
+        <li className="Company">
           <Roller2 label="Company" />
         </li>
 
         {company.map((label) => (
-          <li className={styles.li}>
+          <li key={label} className={styles.li}>
             <Roller label={label} />
           </li>
         ))}
       </ul>
 
       <ul className="flex flex-col gap-2">
-        <li>
+        <li key="Products">
           <Roller2 label="Products" />
         </li>
 
         {products.map((label) => (
-          <li className={styles.li}>
+          <li key={label} className={styles.li}>
             <Roller label={label} />
           </li>
         ))}

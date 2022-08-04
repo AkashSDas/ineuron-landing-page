@@ -10,9 +10,9 @@ export function ArrowRight2({ className }) {
     >
       <path
         d="M14 16L18 12M18 12L14 8M18 12L6 12"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

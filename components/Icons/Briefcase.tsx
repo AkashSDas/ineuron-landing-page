@@ -14,10 +14,10 @@ function Briefcase() {
       <path
         d="M17.5 15.2V16.45C17.5 16.4625 17.5 16.4625 17.5 16.475C17.5 17.8375 17.4875 18.95 15 18.95C12.525 18.95 12.5 17.85 12.5 16.4875V15.2C12.5 13.95 12.5 13.95 13.75 13.95H16.25C17.5 13.95 17.5 13.95 17.5 15.2Z"
         stroke="#28303F"
-        stroke-width="1.5"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

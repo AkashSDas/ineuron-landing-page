@@ -10,9 +10,9 @@ function Cancel() {
       <path
         d="M23.0111 10.9896L10.9902 23.0105M23.0111 23.0104L10.9902 10.9896"
         stroke="#636363"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
