@@ -1,4 +1,5 @@
 import { motion, MotionStyle } from "framer-motion";
+import { useRef } from "react";
 
 import Affiliate from "@components/Icons/Affiliate";
 import Blog from "@components/Icons/Blog";
@@ -92,7 +93,7 @@ function OurProducts() {
         }}
         initial="initial"
         whileInView="animate"
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: "some" }}
       >
         <Card
           icon={<Affiliate />}
