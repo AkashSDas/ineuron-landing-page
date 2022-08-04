@@ -1,13 +1,16 @@
 .modal {
-  @apply w-[45%] bg-light-purple rounded-xl overflow-clip p-2;
+  @apply bg-light-purple rounded-xl overflow-clip p-2
+  w-[95%] md:w-[75%] lg:w-[60%] xl:w-[40%];
 }
 
 .form {
-  @apply flex items-center gap-3;
+  @apply flex items-center
+  gap-1;
 }
 
 .input {
-  @apply h-[44px] px-4 py-4 outline-none flex-grow bg-light-purple;
+  @apply h-[44px] outline-none flex-grow bg-light-purple
+  p-2;
 }
 
 .tags {

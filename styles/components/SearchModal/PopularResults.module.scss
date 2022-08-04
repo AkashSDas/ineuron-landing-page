@@ -11,6 +11,10 @@
 
 .course {
   @apply flex gap-4 cursor-pointer hover:bg-light-violet;
+
+  img {
+    height: 63px;
+  }
 }
 
 .tags {
