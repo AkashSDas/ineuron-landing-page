@@ -81,7 +81,7 @@ function CoursesSlideShow() {
         </motion.h3>
 
         <motion.div className={styles.actions} style={style} variants={item}>
-          <a href="https://ineuron.ai/courses" target="_blank">
+          <a href="https://ineuron.ai/courses" target="_blank" rel="noreferrer">
             <TextButton label="View More" />
           </a>
 
@@ -118,7 +118,7 @@ function CoursesSlideShow() {
       >
         <Slider {...settings} className={`${styles.slider} course-slide-show`}>
           {activeProgram.programs.map((prg) => (
-            <a href={prg.link} target="_blank" key={prg.title}>
+            <a href={prg.link} target="_blank" rel="noreferrer" key={prg.title}>
               <CourseCard
                 coverImgURL={prg.coverImgURL}
                 title={prg.title}

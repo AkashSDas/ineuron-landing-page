@@ -51,12 +51,12 @@ function InstructorGridCard(props: IInstructors) {
 
         <div className={`${styles.social} group-hover:flex`}>
           {socialMedia.linkedin ? (
-            <a href={socialMedia.linkedin} target="_blank">
+            <a href={socialMedia.linkedin} target="_blank" rel="noreferrer">
               <Linkedin />
             </a>
           ) : null}
           {socialMedia.youtube ? (
-            <a href={socialMedia.youtube} target="_blank">
+            <a href={socialMedia.youtube} target="_blank" rel="noreferrer">
               <YouTube />
             </a>
           ) : null}

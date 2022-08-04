@@ -52,18 +52,28 @@ function Footer() {
             <a
               href="https://www.youtube.com/channel/UCb1GdqUqArXMQ3RS86lqqOw"
               target="_blank"
+              rel="noreferrer"
             >
               <YouTube />
             </a>
-            <a href="https://www.facebook.com/ineuronai" target="_blank">
+            <a
+              href="https://www.facebook.com/ineuronai"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Facebook />
             </a>
-            <a href="https://twitter.com/iNeuronAi" target="_blank">
+            <a
+              href="https://twitter.com/iNeuronAi"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Twitter />
             </a>
             <a
               href="https://www.linkedin.com/company/ineuron-ai/"
               target="_blank"
+              rel="noreferrer"
             >
               <Linkedin />
             </a>
@@ -83,6 +93,7 @@ function Footer() {
             <a
               href="https://www.google.com/maps/place/iNeuron.ai/@13.0542869,77.7624757,15z/data=!4m5!3m4!1s0x0:0x89fbcd434743b11b!8m2!3d13.0540489!4d77.7614087"
               target="_blank"
+              rel="noreferrer"
             >
               17th Floor Tower A, Brigade Signature Towers, Sannatammanahalli,
               Bengaluru, Karnataka 562129.
@@ -103,7 +114,7 @@ function Footer() {
 
         {company.map((item) => (
           <li key={item.label} className={styles.li}>
-            <a href={item.href} target="_blank">
+            <a href={item.href} target="_blank" rel="noreferrer">
               <Roller label={item.label} />
             </a>
           </li>
@@ -117,7 +128,7 @@ function Footer() {
 
         {products.map((item) => (
           <li key={item.label} className={styles.li}>
-            <a href={item.href} target="_blank">
+            <a href={item.href} target="_blank" rel="noreferrer">
               <Roller label={item.label} />
             </a>
           </li>

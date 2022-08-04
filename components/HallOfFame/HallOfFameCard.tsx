@@ -17,14 +17,14 @@ function HallOfFameCard(props: IHallOfFame) {
 
         <div className={styles.social}>
           {socialMedia.linkedin ? (
-            <a href={socialMedia.linkedin} target="_blank">
+            <a href={socialMedia.linkedin} target="_blank" rel="noreferrer">
               <Linkedin />
             </a>
           ) : null}
         </div>
       </div>
 
-      <a href={link} target="_blank">
+      <a href={link} target="_blank" rel="noreferrer">
         <h4 className={styles.name}> {name}</h4>
       </a>
       <p className={styles.role}>{role}</p>
