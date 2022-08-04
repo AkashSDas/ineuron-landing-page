@@ -6,7 +6,7 @@ import SearchButton from "@components/Button/SearchButton";
 import TextButton from "@components/Button/TextButton";
 import Cancel from "@components/Icons/Cancel";
 import Menu from "@components/Icons/Menu";
-import { SmallNavbarContext } from "@lib/context";
+import { SearchModalContext, SmallNavbarContext } from "@lib/context";
 import styles from "@styles/components/Header/SmallNavbar.module.scss";
 
 import CoursesDropDown from "./CoursesDropDown";
@@ -55,6 +55,9 @@ function SmallNavbar() {
 
   const { isOpen, setIsOpen } = useContext(SmallNavbarContext);
 
+  const { searchModalIsOpen, setSearchModalIsOpen } =
+    useContext(SearchModalContext);
+
   return (
     <nav className={styles.navbar}>
       <motion.ul
@@ -72,7 +75,12 @@ function SmallNavbar() {
         animate="animate"
         className={styles["nav-right"]}
       >
-        <motion.div variants={item}>
+        <motion.div
+          variants={item}
+          onClick={() => {
+            setSearchModalIsOpen(true);
+          }}
+        >
           <SearchButton />
         </motion.div>
         <motion.div variants={item} onClick={() => setIsOpen((s) => !s)}>
