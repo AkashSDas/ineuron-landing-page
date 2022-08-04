@@ -6,9 +6,7 @@
 }
 
 .heading {
-  @apply text-center text-[30px] leading-[30px] sm:text-[60px] sm:leading-[60px] 
-  md:text-[90px] md:leading-[98px] text-dark-violet 
-  font-medium;
+  @apply text-center text-[40px] leading-[40px] md:text-[90px] md:leading-[98px] text-dark-violet font-medium;
 
   font-weight: 500;
   animation: textReveal 900ms;
